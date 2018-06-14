@@ -27,7 +27,22 @@ window.onload = () => {   //este código se va a ejecutar si sólo si la página
     });
     userInputBox.addEventListener("input", ()=>{
         updateBoxes();
+
     });
+
+
+    elBoton.addEventListener("click", ()=>{ 
+        function random(number) {
+            return Math.floor(Math.random()*(number+1));
+          }
+          
+          elBoton.onclick = () => {
+            let rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+            document.body.style.backgroundColor = rndCol;
+          }
+
+    });     
+
 };
 
 
